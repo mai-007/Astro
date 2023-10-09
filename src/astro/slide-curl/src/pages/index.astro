@@ -1,0 +1,444 @@
+---
+import './../styles/_global.scss'
+import './../styles/_section.scss'
+import MainView from '../components/mainView.astro'
+import Container_s from '../components/container_s.astro'
+import ArrowBlock from '../components/arrowBlock.astro'
+import CheckBlock from '../components/checkBlock.astro'
+import BorderBox from '../components/borderBox.astro'
+import Title from '../components/title.astro'
+import ContentBox from '../components/contentBox.astro'
+import BgSection from '../components/bgSection.astro'
+import Button from '../components/button.astro'
+import Voice from '../components/voice.astro'
+
+const section01 = [
+  {
+    text:"瞼が厚いお客様の目を見た瞬間に上がるかな〜と<span class='textBold'>施術まえから不安</span>"
+  },
+  {
+    text:"二重瞼のお客様だったのに<span class='textBold'>なんで上がらなかったんだろう</span>"
+  },
+  {
+    text:"前回はうまく上げられたけど<span class='textBold'>今回も綺麗にできるかな~</span>"
+  },
+
+]
+const section09 = [
+  {
+    text:"講師一人につき2人までしか見ません"
+  },
+  {
+    text:"マンツーマン指導あり"
+  },
+  {
+    text:"アフターフォローは講師との1対1のやり取りで6週間質問し放題"
+  },
+  {
+    text:"ZOOMにてアフターフォローあり"
+  },
+  {
+    text:"技術質問のみならず、SNSコンサル、写真の撮り方などまで回答します"
+  },
+]
+const section12 = [
+  {
+    text:"ロッドの理論"
+  },
+  {
+    text:"一重瞼さん/瞼重い方/下りまつ毛の施術について説明"
+  },
+  {
+    text:"まつ毛層のリッジを揃えるには"
+  },
+  {
+    text:"施術のバラつきを無くす施術方法"
+  },
+  {
+    text:"ロッドの置き方/正しい位置"
+  },
+  {
+    text:"ロッドの選定について"
+  },
+  {
+    text:"モデル実践"
+  },
+]
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Slide-curl</title>
+	</head>
+	<body>
+    <main>
+      <MainView />
+      <Container_s/>
+      <section class="section01">
+        <ArrowBlock
+        text="こんな経験ありませんか？"
+        />
+        <ul class="mt48 pb80">
+        {section01.map(section01 =>(
+        <CheckBlock
+          image="./images/check-back.svg"
+          text={section01.text}
+          />
+        ))}
+        </ul>
+        </div>
+        <BorderBox
+        text="そんな悩み<br/>スライドカール講習会で<br class='sp'>解決します!" />
+      </section>
+      <section class="section02">
+        <Title
+          text="意外と知らない!"
+        />
+        <p class="textM lt01 alignCenter lineHight18 mb32">下りまつ毛の施術は難しい。
+          <br/>なぜ難しい？</p>
+        <ContentBox
+        title="説明"
+        text="下がりまつ毛の方はもともとマイナス2、30度の角度からカールが始まるので、マイナスの角度を考慮し、より強いカールを作らないと上がりきらない事があります。<br>カウンセリングでまつ毛の角度確認をしましょう！">
+        <div class="l-flexwrap" slot="flexImage">
+          <figure class="figure-s">
+            <img src="./images/illustration_01@2x-sp.jpg" alt="">
+            <figcaption>下がりまつ毛</figcaption>
+          </figure>
+          <figure class="figure-s">
+            <img src="./images/illustration_02@2x-sp.jpg" alt="">
+            <figcaption>上がりまつ毛</figcaption>
+          </figure>
+          <figure class="figure-s">
+            <img src="./images/illustration_03@2x-sp.jpg" alt="">
+            <figcaption>まっすぐなまつ毛</figcaption>
+          </figure>
+        </div>
+      </ContentBox>
+      <ContentBox
+        title="解決方法"
+        text="下がりまつ毛の方はもともとマイナス2，30度の角度からカールが始まるので、マイナスの角度を考慮し、より強いカールを作らないと上がりきらない事があります。<br/>カウンセリングでまつ毛の角度確認をしましょう！">
+        <img src="./images/section02_image.jpg" alt="" >
+      </ContentBox>
+      </section>
+      <section class="section03">
+        <Title
+          text="でも、ちょっと待って"
+        />
+        <div class="w95">
+        <p>現在のロッドはまつ毛に被せる事ができません。</p>
+        <p>なぜなら、従来のロッド(の形状)をまつ毛に被せて巻き上げると最上層のまつ毛がカクンとなりやすいからです。</p>
+        <p>下部が丸くなっているロッドがあっても、ロッドの位置が少しズレると失敗につながりやすいです。</p>
+        <div class="l-flexwrap">
+          <img src="./images/section03_image.jpg" alt="">
+          <p>写真は少し時間が経ったまつ毛ですが、層によってカールの大きさが違うのはお分かりでしょうか？</p>
+        </div>
+      </section>
+
+
+      <section class="section04">
+        <Title
+          text="だからこそ、まつ毛に被せられる<br/>ロッドが必要です。"
+        />
+        <p class="alignCenter fitContent mb32">
+          置く位置が少しずれても
+          <strong class="textBold">仕上がりに<br/>ムラがないロッドが必要</strong>
+        </p>
+        <p class="textM mb56">まつ毛を被せてロッドを置くことによって何が変わる？</p>
+        <ContentBox
+        title="変化その1"
+        >
+        <p class="textBold textM alignCenter mb24">下がりまつ毛もしっかりと上がる</p>
+        <div class="wFlex">
+          <figure class="c-figure">
+            <img src="./images/section04_image_01.jpg" alt="">
+            <figcaption>黒目が被るほど下がっている</figcaption>
+          </figure>
+          <figure class="c-figure">
+            <img src="./images/section04_image_02.jpg" alt="">
+            <figcaption>赤：90度カール・青：120度カール</figcaption>
+          </figure>
+          <figure class="c-figure">
+            <img src="./images/section04_image_03.jpg" alt="">
+            <figcaption>正面からしっかりと長さ強調</figcaption>
+          </figure>
+        </div>
+        </div>
+      </ContentBox>
+      <ContentBox
+      title="変化その2"
+      >
+      <p class="textBold textM alignCenter mb24">瞼の厚い方の施術が得意になる</p>
+      <div class="wFlex">
+          <figure class="c-figure">
+            <img src="./images/section04_image_04.jpg" alt="">
+            <figcaption>before</figcaption>
+          </figure>
+          <figure class="c-figure">
+            <img src="./images/section04_image_05.jpg" alt="">
+            <figcaption>after</figcaption>
+          </figure>
+        </div>
+        </ContentBox>
+
+        <ContentBox
+        title="変化その3"
+        >
+        <p class="textBold textM alignCenter mb24">全層のまつ毛に均一カール<br />(見た目が綺麗になる)</p>
+        <div class="wFlex">
+          <figure class="c-figure">
+            <img src="./images/section04_image_06.jpg" alt="">
+          </figure>
+          <figure class="c-figure">
+            <img src="./images/section04_image_07.jpg" alt="">
+          </figure>
+        </div>
+        </ContentBox>
+
+        <ContentBox
+        title="変化その4"
+        >
+        <p class="textBold textM alignCenter mb24">強いカール形成で<br/>リフトアップ効果も期待できる</p>
+        <div class="wFlex">
+          <figure class="c-figure">
+            <img src="./images/section04_image_08.jpg" alt="">
+            <figcaption>瞼が下がり気味</figcaption>
+          </figure>
+          <figure class="c-figure">
+            <img src="./images/section04_image_09.jpg" alt="">
+            <figcaption>瞼が丸くカーブ</figcaption>
+          </figure>
+        </div>
+        </ContentBox>
+      </section>
+
+      <BorderBox
+      text="<span class='text16'>ロッドをまつ毛に被せて<br class='sp'>置くことによって<br/></span>悩みを解決できる目元が沢山!"/>
+
+      <section class="section05 bg-white">
+        <Title
+        text="スライドカールは<br>他社と何が違うの？"
+      />
+      <ContentBox class="beige w95">
+        <h4 class="textM alighCenter mb24 fitContent textBold lt01">１.使っているロッドが違う</h4>
+        <div class="wFlex">
+          <img src="images/section05_image_01.jpg" alt="従来との違いイメージ画像">
+        <p>
+          ロッドの始まりから数学理論によって角度が形成されているロッドだからこそまつ毛に被せて施術が可能！
+          カーブの中心をずらしてロッドの形状を作るロッドは他に知らない。
+        </p>
+      </div>
+      </ContentBox>
+      <ContentBox class="beige w95">
+          <h4 class="textM alighCenter mb24 fitContent textBold lt01">2.施術順番が違う</h4>
+          <p class="mb24">
+            最近流行の下軟化方法はスライドカール発祥です。なぜこの順番なのでしょうか。
+          </p>
+          <img src="images/section05_image_02.jpg" alt="従来との違いイメージ画像">
+          <p>
+            まつ毛が軟化していなければ、どんなロッドを使用してもまつ毛は上がりません。
+下軟化のメリットは、はっきりと軟化状態の確認ができる事です。<br>
+※軟化の目安は講習会にて
+          </p>
+        </ContentBox>
+      </section>
+
+      <section class="section06">
+        <Title
+        text="他社のロッドでは難しい部分を<br>スライドカールで補おう"
+      />
+        <div class="l-flexwrap mb56">
+          <img src="./images/section06_image_01.jpg" alt="">
+          <div>
+            <p>唯一無二の存在【凸ロッド】は日本人の目元に
+              最も合うロッド</p>
+          </div>
+        </div>
+        <h4 class="textM textM alighCenter mb24 fitContent textBold lt01">現在カールバージョンは3つ</h4>
+        <div class="flexwrap">
+          <img src="https://placehold.jp/244x244.png">
+          <img src="https://placehold.jp/244x244.png">
+          <img src="https://placehold.jp/244x244.png">
+        </div>
+        <p class="textM textBold alignCenter fitContent">
+            立ち上げカール専用ロッドとして<br>
+今まで満足いかなかった方を<br>
+リピートさせましょう!
+        </p>
+      </section>
+
+      <BgSection class="bg01">
+        <p class="textM alignCenter mb24">サロンのお客様の年齢層はどれくらいですか？</p>
+        <p class="textM alignCenter">悩みを抱えている年齢層の方を満足いただけていますか？</p>
+      </BgSection>
+
+      <section class="section07">
+        <Title
+        text="スライドカールを<br>知ることから始めましょう"
+      />
+      <BorderBox
+      class="mb32 w95"
+      text="LINE登録者特典<br>無料セミナー"
+      />
+
+        <ContentBox
+        class="w95"
+        title="セミナー①"
+        text="<span class='textBold'>徹底解説</span><br/>瞳の厚い方の施術・下りまつ毛の施術・層厚い方の施術について">
+      </ContentBox>
+      <ContentBox
+      class="w95"
+      title="セミナー②"
+      text="<span class='textBold'>徹底解説</span><br/>まつ毛の層を揃えるにはどうしたら？について">
+    </ContentBox>
+        <p class="mb32 w95">※LINE登録の際に無料セミナー希望とご記入ください。</p>
+        <Button
+        text="LINE登録"
+        class="green w95 alignCenter"
+        />
+      </section>
+
+      <section class="section08 bg-white">
+        <Title
+        text="受講者の声"
+        />
+        <Voice
+          image="./images/section08_image_01.jpg"
+          name="兵庫県姫路市 Beauty Salon BiBi様"
+          title="他にはない講習の充実度なのに、講習後も連絡できるので安心でした"
+          text="以前2度ラッシュリフトの講習を受けましたが、思うように上がらず挫折しかけていました。<br>ですが、スライドカールと出会いもう一度信じてみようとチャレンジしました。<br>1日みっちりの講習でしたが、かなり充実した内容で大満足です。受講後も講師とLINEで繋がれて、たくさん質問しましたが、写真や動画を交えて分かりやすく説明してくださって助かりました 。<br>以前より断然上げられるようになり、今ではスライドカール一本でパーマメニューを行っております。"
+          />
+          <Voice
+          image="./images/section08_image_02.jpg"
+          name="大阪府堺市　まつげパーマきょう様"
+          title="他にも試したけど、スライドカールの持ちの良さはやっぱり抜群ですね！"
+          text="まつ毛に触れることが初めてでスライドカールが初めてのまつ毛パーマ講習でした。おかげでまつ毛パーマの事が段々とわかるようになって、お客様の色んな声に応えたいなという思いから、他社ロッドも揃えるようになりました。 違うロッドや薬剤に触れてみることで、改めてスライドカールの良さにも気づけました。（持ちの良さはやっぱり抜群ですね）今では、お客様のまぶたによって凸ロッドと他社ロッドを使い分けています。"
+          />
+      </section>
+
+
+      <section class="bgwhite section09">
+        <Title
+        text="他の講習会との違い"
+        />
+        <p class="textM textBold alignCenter fitContent mb56">
+          確実に売上が作れるように<br>講習していきます！！
+        </p>
+        {section09.map(section09 =>(
+        <CheckBlock
+        image="./images/check-gold.svg"
+        text={section09.text}
+        />
+        ))}
+      </section>
+      <BgSection class="bg02 textBold">
+        <p class="textM alignCenter mb24">まつ毛パーマにおいて<br>一番大事なことは<br>ロッドです</p>
+        <p class="textM alignCenter">そして<br>
+          ロッドを置く位置を知らなければ<br>
+          正しく施術できません。</p>
+      </BgSection>
+
+      <section class="section10">
+        <Title
+        text="スライドカールは<br>一般販売していません。"
+        />
+        <p class="textM textBold alignCenter mb56">
+          どうして講習を<br>受けないと行けないの？
+        </p>
+          <p class="textM textBold alignCenter mb56">
+            皆さんに最後の質問です！<br>
+            今持っているロッドを<br>
+            全て使いこなせていますか？
+        </p>
+        <div class="l-flexwrap mb56">
+          <img src="./images/section10_image_01.jpg" alt="">
+          <div>
+            <p>答えがNOの方。</p>
+            <p>ロッドにはそれぞれに特性があり使い方があります。</p>
+          </div>
+        </div>
+        <p>他の施術者が使っている動画を見ても、<span class="bold">根本的な事を理解しなければ、自分の知識にはなりません。</span></p>
+      </section>
+
+      <section class="section11">
+        <Title
+        text="スライドカール講習会が<br>必須な理由"
+        />
+        <div class="boxBorder">
+          <ul>
+            <li>1.ロッドを置く位置が根本的に違う</li>
+            <li>2.工程が従来と異なる</li>
+            <li>3.ロッドの理論を知って初めて完成するパーマ</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section12">
+        <Title
+        text="講習会で学べること"/>
+        <ul class="bg-white">
+          {section12.map(section12 =>(
+            <CheckBlock
+              image="./images/check-gold.svg"
+              text={section12.text}
+              />
+            ))}
+        </ul>
+      </section>
+
+      <section class="section13">
+        <ArrowBlock
+        class="gold mb80"
+        text="もう失敗したくない施術者様へ"
+        />
+        <p class="textM textBold alignCenter mb56">
+          ロッドを正しく使い、講習会で<br>
+          マツパの悩みを解決しよう!
+        </p>
+        <Button
+        class="w95"
+        text="違いを体験したい方へ">
+      </section>
+
+      <section class="section14">
+        <Title
+        text="FQA"/>
+        <dl>
+          <dt>
+            <span class="icon">Q.</span>
+            講習時間はどれくらいですか？
+          </dt>
+          <dd>
+            <span class="icon">A.</span>
+            初心者は８時間、経験者は６時間です。
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <span class="icon">Q.</span>
+            商材はついていますか？
+          </dt>
+          <dd>
+            <span class="icon">A.</span>
+            2万円分の商材がついています。講習会翌日から練習可能
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <span class="icon">Q.</span>
+            難しいですか？
+          </dt>
+          <dd>
+            <span class="icon">A.</span>
+            施術順番やロッドの置き方が違うので、慣れるまでに練習が必要です。
+まっさらな気持ちで受けて頂くとコツを掴むのが早いです
+
+          </dd>
+        </dl>
+      </section>
+    </main>
+	</body>
+</html>

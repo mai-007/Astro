@@ -1,0 +1,143 @@
+.section01{
+  max-width: unset;
+  min-height: 600px;
+  padding: 0;
+  background: url(./../images/section01_bgimage.jpg);
+  background-size: cover;
+}
+
+.section02,.section04,.section06{
+  margin-bottom: 104px;
+}
+
+.section03,.section05,.section07,.section08,.section09,.section11,.section13{
+  background: #fff;
+  max-width: unset;
+  padding-bottom: 104px;
+}
+.section03{
+  p{
+    margin-bottom: 1rem;
+  }
+  img{
+    max-width: calc((100% - 1rem)/2);
+  }
+}
+
+.section04{
+  .c-figure{
+    margin-bottom: 2rem;
+  }
+  figcaption{
+    font-size: 1rem;
+  }
+}
+
+.section05{
+  h5{
+    display: none;
+  }
+  img{
+    margin-bottom: 16px;
+  }
+}
+
+.section06{
+  .l-flexwrap{
+    img{
+      width: calc((100% - 1rem)/2);
+    }
+  }
+  .flexwrap{
+    text-align: center;
+    img{
+      display:inline-block;
+      margin: 0 auto 40px;
+    }
+  };
+}
+
+.section07{
+  background: url('./../images/section07_bg.jpg');
+  background-size: cover;
+}
+
+.section10{
+  padding-bottom: 104px;
+  .l-flexwrap{
+    img{
+      width:30%;
+      height: auto;
+      margin-right: 1rem;
+    }
+  }
+}
+.section12{
+  padding-bottom: 104px;
+  ul{
+    padding: 1rem 0;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+.section14{
+  background: #EEF1F3;
+  padding-bottom: 104px;
+  dl{
+    width: 20rem;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+    background: #fff;
+    dt{
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width:1024px) {
+    .wFlex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      p{
+        width: calc((100% - 3.5rem) / 2);
+      }
+      figcaption{
+        width: fit-content;
+      }
+    }
+    .section04{
+      p{
+        width: fit-content;
+        margin: 0 auto 56px;
+      }
+    }
+  .section07{
+    p{
+      width: fit-content;
+    }
+  }
+  .section12{
+      ul{
+        padding: 2rem 0;
+        width: 960px;
+        font-size: 2rem;
+      }
+    }
+  .section14{
+    max-width: unset;
+    dl{
+      width: 80%;
+      max-width: 960px;
+      margin: 0 auto 2rem;
+      padding: 2rem;
+      dt{
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  .text16{
+    font-size: 1.5rem;
+  }
+}

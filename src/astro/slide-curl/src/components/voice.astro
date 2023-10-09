@@ -1,0 +1,60 @@
+---
+const { image, name, title, text  } = Astro.props;
+---
+
+
+<div class="wrap">
+  <figure>
+    <img src={image} alt="">
+    <figcaption>{name}</figcaption>
+  </figure>
+  <div>
+    <h4>{title}</h4>
+    <p set:html={text}></p>
+  </div>
+  </div>
+</div>
+
+<style lang="scss">
+  div{
+    max-width: 95%;
+    background: #F2EBE5;
+    margin: 0 auto 56px;
+    padding: 24px 16px;
+  }
+  figure{
+    img{
+      border: 3px solid #fff;
+      border-radius: 16px;
+      margin-bottom: 8px;
+    }
+    figcaption{
+      font-size: 0.875rem;
+    }
+  }
+  h4{
+    color: var(--gold);
+    font-size: var(--textM-sp);
+    margin-bottom: 1.5rem;
+    line-height: 2em;
+    padding: 1rem 0;
+  }
+  @media screen and (min-width:1024px) {
+    .wrap{
+      max-width:960px;
+      margin: 0 auto 72px;
+      background: #F2EBE5;
+    }
+    h4{
+      font-size:2rem;
+      font-weight: bold;
+    }
+    figure{
+      width: 50%;
+      margin: 0 auto;
+      img{
+        width: 100%;
+      }
+    }
+  }
+</style>

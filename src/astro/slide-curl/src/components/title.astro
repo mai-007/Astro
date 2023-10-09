@@ -1,0 +1,23 @@
+---
+const { text } = Astro.props;
+---
+
+<h3 set:html={text}></h3>
+
+<style lang="scss">
+  h3{
+    width: fit-content;
+    margin: 0 auto 1rem;
+    padding: 3rem 0;
+    text-align:center;
+    line-height:2em;
+    &::after{
+      content: '';
+      width: 65px;
+      height: 3px;
+      margin: 0.5rem auto 0;
+      display: block;
+      background: var(--gold);
+    }
+  }
+</style>

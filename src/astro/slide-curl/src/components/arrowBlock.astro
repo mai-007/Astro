@@ -1,0 +1,37 @@
+---
+const { text } = Astro.props;
+---
+
+<h3 class:list={["black", Astro.props.class]}>{text}</h3>
+
+<style lang="scss">
+  h3{
+    position: relative;
+    max-width: unset;
+    padding: 2.5rem 0;
+    color: #fff;
+    text-align: center;
+  }
+  h3::after{
+    content: "";
+    position: absolute;
+    top: 99%;
+    left: 0;
+    box-sizing: border-box;
+    border-right: 50vw solid transparent;
+    border-left: 50vw solid transparent;
+  }
+  .black{
+    background: var(--black);
+    &::after{
+      border-top: 30px solid var(--black);
+    }
+  }
+  .gold{
+    background: var(--gold);
+    &::after{
+      border-top: 30px solid var(--gold);
+    }
+  }
+
+</style>

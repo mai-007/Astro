@@ -1,0 +1,23 @@
+<div class="base" class:list={[Astro.props.class]}>
+  <div class="wrap">
+<slot />
+  </div>
+</div>
+
+<style>
+  .base{
+    max-width: unset;
+    padding: 120px 0;
+    background-size: cover;
+  }
+  .wrap{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .bg01{
+    background: url('./../images/section06_bg.jpg');
+  }
+  .bg02{
+    background: url('./../images/section09_bg.jpg');
+  }
+</style>

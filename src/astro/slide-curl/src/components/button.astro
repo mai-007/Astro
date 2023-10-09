@@ -1,0 +1,46 @@
+---
+const { href, text } = Astro.props;
+---
+
+<button type="button" class:list={["button", Astro.props.class]}>
+  <a href={href}>{text}</a>
+</button>
+
+<style lang="scss">
+  button{
+    width: 100%;
+    height: 4.5rem;
+    cursor: pointer;
+    background: var(--goldGradation);
+    border: 1px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: block;
+  }
+  a{
+      color: #fff;
+      font-size: 1.25rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  button:active{
+    box-shadow: none;
+  }
+  .green{
+    background: linear-gradient(0deg, #02C053 50%, #5FFDA2 92.36%);
+  }
+  @media screen and (min-width:1024px) {
+    button{
+      width: 60%;
+      height: 6rem;
+      max-width: 960px;
+      margin: 0 auto;
+      a{
+        font-size: 3rem;
+      }
+    }
+  }
+</style>

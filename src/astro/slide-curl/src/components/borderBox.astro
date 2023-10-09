@@ -1,0 +1,40 @@
+---
+const { text } = Astro.props;
+---
+
+<div class:list={["w100",Astro.props.class]}>
+  <div class="innerBlock" set:html={text}>
+  </div>
+</div>
+
+<style>
+  div{
+    background: var(--goldGradation);
+    padding: 1rem;
+    color: #fff;
+  }
+  .innerBlock{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    font-size:  1.25rem;
+    font-weight: bold;
+    line-height: 2em;
+    text-align:center;
+    text-shadow: var(--text-shadow)
+  }
+  .w100{
+    max-width: unset;
+  }
+  .w95{
+    max-width: 95%;
+  }
+  @media screen and (min-width:1024px) {
+    div{
+      padding: 2rem;
+    }
+    .innerBlock{
+      font-size: 2rem;
+    }
+    }
+</style>

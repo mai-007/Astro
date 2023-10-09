@@ -1,0 +1,57 @@
+---
+import './../styles/_global.scss'
+---
+
+<section class="mainView">
+  <div>
+    <span>施術者のための</span>
+    <h2>悩み<span class="catch-small">を</span><br class="sp">解決<span class="catch-small">する</span><br class="sp">講習会</h2>
+  </div>
+</section>
+
+
+<style lang="scss">
+  .mainView{
+    max-width: unset;
+    position: relative;
+    height: 60vh;
+    padding: 1rem;
+    color: #fff;
+    background: url("./../images/mainview-sp.jpg");
+    background-size: cover;
+    letter-spacing: 0.1em;
+  }
+  div{
+    position: absolute;
+    bottom: 3rem;
+  }
+  h2{
+    font-size: 2.5rem;
+  }
+  .catch-small{
+    font-size:2rem;
+  }
+  @media screen and (min-width:1024px) {
+    .mainView{
+    position: relative;
+    height: 80vh;
+    padding: 2rem;
+    background: url("./../images/mainview.jpg");
+    background-size:cover;
+}
+div{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  h2{
+    font-size:3.5rem;
+  }
+  .catch-small{
+    font-size:3rem;
+  }
+  span{
+    font-size: 2rem;
+  }
+}
+</style>

@@ -1,0 +1,32 @@
+---
+const { image, text } = Astro.props;
+---
+
+  <li class="c-chackList__item">
+    <img src={image} alt="">
+    <span set:html={text}></span>
+  </li>
+
+<style lang="scss">
+    li{
+      width: 20rem;
+      margin: 0 auto 1rem;
+      padding: 0.5rem 1rem;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      img{
+        margin-right: 1rem;
+      }
+    }
+  @media screen and (min-width:1024px) {
+    li{
+      width: 100%;
+      max-width:960px;
+      margin: 0 auto 2rem;
+      padding: 1rem 2rem;
+      font-size:1.5rem;
+    }
+    }
+</style>

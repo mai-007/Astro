@@ -1,0 +1,51 @@
+---
+const { title,text } = Astro.props;
+---
+
+<div class:list={["white","w100",Astro.props.class]}>
+  <h5>{title}</h5>
+  <slot />
+  <p set:html={text}></p>
+  <slot name="flexImage">
+  <slot name="colomnImage">
+</div>
+
+<style lang="scss">
+  div{
+    padding: 24px 16px;
+    margin-bottom: 56px;
+    &::last-pf-type{
+      margin-bottom: 0;
+    }
+    h5{
+      width: fit-content;
+      margin: 0 auto 1.5rem;
+      padding: 0.2rem 1rem;
+      border: 1px solid #222;
+      font-weight: bold;
+    }
+  }
+  .white{
+      background: #fff;
+    }
+  .beige{
+      background: #F2EBE5;
+      max-width: 95%;
+      margin: 0 auto 56px;
+  }
+  .w100{
+    max-width: unset;
+  }
+  .w95{
+    max-width: 95%;
+  }
+  @media screen and (min-width:1024px) {
+    h5{
+      font-size:1.5rem;
+    }
+    .w100{
+      max-width:960px;
+      margin: 0 auto 56px;
+    }
+  }
+</style>
